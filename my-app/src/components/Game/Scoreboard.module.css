@@ -1,0 +1,9 @@
+.board {
+    margin: 1rem auto;
+    border: 1px solid black;
+    max-width: 30%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

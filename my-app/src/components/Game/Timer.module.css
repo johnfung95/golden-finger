@@ -1,0 +1,10 @@
+.clock {
+    border: 1px solid brown;
+    max-width: 50%;
+    height: 30vh;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+}
