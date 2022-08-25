@@ -1,0 +1,48 @@
+.btn {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 20rem;
+    cursor:pointer;
+    font-size: 2rem;
+    background-color: whitesmoke;
+    transition: background-color .1s ease-in, font-size .05s ease-in-out, font-weight .05s ease-in-out, border .2s ease-in ;
+}
+
+.start:hover {
+    color: white;
+    background-color: rgb(248, 159, 174);
+    box-shadow: 5px 5px 10px red;
+}
+
+.start:active {
+    color: rgb(236, 34, 44);
+    background-color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bolder;
+    border: none;
+    box-shadow: none;
+}
+
+.end {
+    background-color: #999;
+    color: #555;
+    cursor: not-allowed;
+    border: none;
+    box-shadow: none;
+}
+
+.resetBtn {
+    width: 10rem;
+    border-radius: 16px;
+    background-color: pink;
+    border: none;
+    cursor:pointer;
+    margin: 1rem auto;
+    padding: .5rem;
+}
+
+.resetBtn:hover {
+    color: white;
+    background-color: rgb(22, 32, 121);
+    border: 1px solid white;
+}

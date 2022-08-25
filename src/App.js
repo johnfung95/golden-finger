@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Card from "./components/UI/Card";
-import Button from "./components/UI/Button";
-import Timer from "./components/Game/Timer";
-import Scoreboard from "./components/Game/Scoreboard";
-import classes from "./App.module.css";
+import Card from "./components/UI/Card/Card";
+import PlayButton from "./components/UI/Buttons/PlayButton";
+import ResetButton from "./components/UI/Buttons/ResetButton";
+import Timer from "./components/Game/Timer/Timer";
+import Scoreboard from "./components/Game/Scoreboard/Scoreboard";
 
 function App() {
   const [isStart, setIsStart] = useState(false);
@@ -12,7 +12,7 @@ function App() {
   const [timeLeft, setTimeLeft] = useState(10);
 
   useEffect(() => {
-    if (isStart) {
+    if (isStart && !isEnd) {
       const timer = setTimeout(() => {
         setTimeLeft((prevTime) => {
           return +prevTime - 1;
@@ -21,20 +21,29 @@ function App() {
       if (timeLeft <= 0) {
         return () => {
           setTimeLeft(0);
+          setIsStart(false);
+          setIsEnd(true);
           clearTimeout(timer);
         };
       }
     }
-    console.log("running");
-  }, [timeLeft, isStart]);
+  }, [timeLeft, isStart, isEnd]);
 
   const getScoreHandler = (newScore) => {
     if (timeLeft > 0) {
-      setScore(newScore.toString());
+      setScore(newScore);
       setIsStart(true);
     } else {
+      setScore(0);
       setIsEnd(true);
     }
+  };
+
+  const getResetHandler = () => {
+    setIsStart(false);
+    setIsEnd(false);
+    setScore(0);
+    setTimeLeft(10);
   };
 
   return (
@@ -42,12 +51,13 @@ function App() {
       <Card>
         <Timer time={timeLeft} />
         <Scoreboard newScore={score} isStart={isStart} />
-        <Button
+        <PlayButton
           onScoreChangeHandler={getScoreHandler}
           count={score}
           isStart={isStart}
           isEnd={isEnd}
         />
+        {isEnd ? <ResetButton onClick={getResetHandler} /> : null}
       </Card>
     </div>
   );
