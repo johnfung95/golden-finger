@@ -1,0 +1,22 @@
+.btn {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 20rem;
+    cursor:pointer;
+    font-size: 2rem;
+    background-color: whitesmoke;
+    transition: background-color .1s ease-in, font-size .05s ease-in-out, font-weight .05s ease-in-out ;
+
+}
+
+.btn:hover {
+    color: white;
+    background-color: rgb(248, 194, 194);
+}
+
+.btn:active {
+    color: rgb(236, 34, 44);
+    background-color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bolder;
+}

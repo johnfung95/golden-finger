@@ -1,8 +1,8 @@
 import React from "react";
 import classes from "./Scoreboard.module.css";
 
-const Scoreboard = () => {
-  return <div className={classes.board}>1</div>;
+const Scoreboard = (props) => {
+  return <div className={classes.board}>{props.newScore}</div>;
 };
 
 export default Scoreboard;
