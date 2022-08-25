@@ -4,12 +4,16 @@ import PlayButton from "./components/UI/Buttons/PlayButton";
 import ResetButton from "./components/UI/Buttons/ResetButton";
 import Timer from "./components/Game/Timer/Timer";
 import Scoreboard from "./components/Game/Scoreboard/Scoreboard";
+import classes from "./App.module.css";
+
+const gameTime = 60; // 1 min
+const initGameScore = 0;
 
 function App() {
   const [isStart, setIsStart] = useState(false);
   const [isEnd, setIsEnd] = useState(false);
-  const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(10);
+  const [score, setScore] = useState(initGameScore);
+  const [timeLeft, setTimeLeft] = useState(gameTime);
 
   useEffect(() => {
     if (isStart && !isEnd) {
@@ -41,14 +45,15 @@ function App() {
   const getResetHandler = () => {
     setIsStart(false);
     setIsEnd(false);
-    setScore(0);
-    setTimeLeft(10);
+    setScore(initGameScore);
+    setTimeLeft(gameTime);
   };
 
   return (
     <div>
       <Card>
-        <Timer time={timeLeft} />
+        <h1 className={classes.title}>1 Minute Challenge</h1>
+        <Timer time={timeLeft} isEnd={isEnd} />
         <Scoreboard newScore={score} isStart={isStart} />
         <PlayButton
           onScoreChangeHandler={getScoreHandler}

@@ -11,6 +11,26 @@
     color: goldenrod;
 }
 
-.startCount {
+.noob {
+    color: orange;
+}
+
+.amateur {
     color: red;
+}
+
+.pro {
+    color: green;
+}
+
+.expert {
+    color: blue;
+}
+
+.hardcore {
+    color: brown;
+}
+
+.god {
+    color: purple;
 }
