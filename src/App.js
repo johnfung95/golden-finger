@@ -34,7 +34,6 @@ function App() {
       setScore(newScore);
       setIsStart(true);
     } else {
-      setScore(0);
       setIsEnd(true);
     }
   };

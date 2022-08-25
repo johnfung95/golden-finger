@@ -8,9 +8,9 @@
     justify-content: center;
     font-size: 3rem;
     font-weight: bolder;
-    color: red;
+    color: goldenrod;
 }
 
 .startCount {
-    color: goldenrod
+    color: red;
 }
