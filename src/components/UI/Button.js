@@ -5,6 +5,9 @@ const Button = (props) => {
   const [newCount, setNewCount] = useState(1);
 
   const addCountHandler = () => {
+    if (props.isEnd) {
+      return;
+    }
     setNewCount((prevCount) => {
       return +prevCount + 1;
     });
@@ -13,7 +16,12 @@ const Button = (props) => {
   };
   return (
     <div>
-      <button className={classes.btn} onClick={addCountHandler}>
+      <button
+        className={`${classes.btn} ${
+          props.isEnd ? classes.end : classes.start
+        }`}
+        onClick={addCountHandler}
+      >
         Hit me!
       </button>
     </div>
