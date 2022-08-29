@@ -1,6 +1,9 @@
 .clock {
-    border: 1px solid brown;
-    max-width: 50%;
+    border: 2rem solid brown;
+    border-radius: 15%;
+    box-shadow: 0.5rem 0.25rem 1.5rem 0.3rem rgba(0, 0, 0, 0.75);
+    max-width: 70%;
+    min-width:50%;
     height: 30vh;
     margin: 1rem auto;
     display: flex;

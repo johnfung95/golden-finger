@@ -1,6 +1,5 @@
 .board {
-    margin: 1rem auto;
-    border: 1px solid black;
+    margin: 2rem auto;
     max-width: 30%;
     height: 10vh;
     display: flex;
@@ -9,28 +8,35 @@
     font-size: 3rem;
     font-weight: bolder;
     color: goldenrod;
+    border-radius: 16px;
 }
 
 .noob {
+    border: 1rem solid orange;
     color: orange;
 }
 
 .amateur {
+    border: 1rem double red;
     color: red;
 }
 
 .pro {
+    border: 1rem groove green;
     color: green;
 }
 
 .expert {
+    border: 1rem ridge blue;
     color: blue;
 }
 
 .hardcore {
+    border: 1rem dashed brown;
     color: brown;
 }
 
 .god {
+    border: 1rem dotted purple;
     color: purple;
 }
