@@ -12,7 +12,7 @@ const Backdrop = (props) => {
   return (
     <div className={onShow ? classes.nope : classes.backdrop}>
       <div className={classes.content}>
-        <h1>Hello!</h1>
+        <h1 className={classes.greet}>Hello!</h1>
         <button onClick={onShowHandler} className={classes.prePlayBtn}>
           Let's see
         </button>
