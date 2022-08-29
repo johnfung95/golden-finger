@@ -4,6 +4,7 @@ import PlayButton from "./components/UI/Buttons/PlayButton";
 import ResetButton from "./components/UI/Buttons/ResetButton";
 import Timer from "./components/Game/Timer/Timer";
 import Scoreboard from "./components/Game/Scoreboard/Scoreboard";
+import Modal from "./components/UI/Modal/Modal";
 import classes from "./App.module.css";
 
 const gameTime = 60; // 1 min
@@ -50,7 +51,8 @@ function App() {
   };
 
   return (
-    <div>
+    <React.Fragment>
+      <Modal />
       <Card>
         <h1 className={classes.title}>1 Minute Challenge</h1>
         <Timer time={timeLeft} isEnd={isEnd} />
@@ -63,7 +65,7 @@ function App() {
         />
         {isEnd ? <ResetButton onClick={getResetHandler} /> : null}
       </Card>
-    </div>
+    </React.Fragment>
   );
 }
 
