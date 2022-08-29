@@ -19,24 +19,79 @@
 .amateur {
     border: 1rem double red;
     color: red;
+    animation: amateur-large 4s 1s 1 alternate backwards
 }
 
 .pro {
     border: 1rem groove green;
     color: green;
+    animation: pro-large 4s 1s 1 alternate backwards
 }
 
 .expert {
     border: 1rem ridge blue;
     color: blue;
+    animation: expert-large 4s 1s 1 alternate backwards
 }
 
 .hardcore {
     border: 1rem dashed brown;
     color: brown;
+    animation: hardcore-large 4s 1s 1 alternate backwards
 }
 
 .god {
     border: 1rem dotted purple;
     color: purple;
+    animation: god-large 4s 1s 1 alternate backwards
+}
+
+@keyframes amateur-large {
+    0%, 100% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 4.5rem;
+    }
+}
+
+@keyframes pro-large {
+    0%, 100% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 5rem;
+    }
+}
+
+@keyframes expert-large {
+    0%, 100% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 7rem;
+    }
+}
+
+@keyframes hardcore-large {
+    0%, 100% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 8.5rem;
+    }
+}
+
+@keyframes god-large {
+    0%, 100% {
+        font-size: 3rem;
+    }
+
+    50% {
+        font-size: 10rem;
+    }
 }
