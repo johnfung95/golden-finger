@@ -1,8 +1,8 @@
 
-.resetBtn {
+.sendBtn {
     width: 10rem;
     border-radius: 16px;
-    background-color: pink;
+    background-color: rgb(192, 227, 255);
     border: none;
     cursor:pointer;
     margin: 1rem;
@@ -10,7 +10,7 @@
     font-size: 1rem;
 }
 
-.resetBtn:hover {
+.sendBtn:hover {
     color: white;
     background-color: rgb(22, 32, 121);
     border: 1px solid white;
