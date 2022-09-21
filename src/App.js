@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "./components/UI/Card/Card";
-import PlayButton from "./components/UI/Buttons/PlayButton";
-import ResetButton from "./components/UI/Buttons/ResetButton";
+import PlayButton from "./components/Game/GameButtons/PlayButton";
+import ResetButton from "./components/Game/GameButtons/ResetButton";
 import Timer from "./components/Game/Timer/Timer";
 import Scoreboard from "./components/Game/Scoreboard/Scoreboard";
 import Modal from "./components/UI/Modal/Modal";
