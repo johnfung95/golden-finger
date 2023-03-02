@@ -29,6 +29,7 @@
 }
 
 .prePlayBtn {
+    margin: 1rem auto;
     font-size: 3rem;
     background-color: pink;
     border-radius: 16px;
@@ -75,12 +76,12 @@
 
 @media screen and (min-width: 768px) {
     .content {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 }
 
 @media screen and (min-width: 1025px) {
     .content {
-        font-size: 10rem;
+        font-size: 5rem;
     }
 }

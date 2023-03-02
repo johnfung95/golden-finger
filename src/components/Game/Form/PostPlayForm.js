@@ -1,11 +1,28 @@
 import { useState, useRef, useEffect } from "react";
+import CrossfadeImage from "./CrossfadeImage.js";
 import classes from "./PostPlayForm.module.css";
 import ResetButton from "../GameButtons/ResetButton";
 import SendResultButton from "../GameButtons/SendResultButton";
+import Ranking from "../Ranking/Ranking";
+
+const images = ["/img/click.jpg", "/img/click-fast.jpg"];
 
 const PostPlayForm = (props) => {
   const [ranks, setRanks] = useState([]);
   const [isResultSent, setIsResultSent] = useState(false);
+  const [imgIndex, setImgIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalTimer = setInterval(() => {
+      if (imgIndex === images.length - 1) {
+        setImgIndex(0);
+      } else {
+        setImgIndex((prevIndex) => prevIndex + 1);
+      }
+    }, 2000);
+
+    return clearInterval(intervalTimer);
+  });
 
   const getRankData = async () => {
     const res = await fetch(
@@ -52,27 +69,19 @@ const PostPlayForm = (props) => {
 
     setIsResultSent(true);
     await getRankData();
-    // props.onConfirm(playerInfo);
   };
 
   return (
     <div className={isResultSent ? classes.resultAfter : classes.resultBefore}>
       <p>Your Score: {props.score}</p>
-      <ul className={classes.rankList}>
-        <h1 className={isResultSent ? classes.show : classes.hidden}>
-          Current Top 10 Scores:
-        </h1>
-        {ranks.length > 0
-          ? ranks.map((rank) => {
-              return (
-                <li className={classes.rankItems} key={rank.key}>
-                  <p>Name: {rank.name}</p>
-                  <p>Score: {rank.score}</p>
-                </li>
-              );
-            })
-          : null}
-      </ul>
+      <div>
+        <CrossfadeImage
+          src={images[imgIndex]}
+          duration={2000}
+          timingFunction={"ease-out"}
+        />
+      </div>
+      {isResultSent ? <Ranking ranks={ranks} /> : null}
       <form onSubmit={submitFormHandler} className={classes.form}>
         <label
           htmlFor="name"
