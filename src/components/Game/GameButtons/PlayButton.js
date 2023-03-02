@@ -3,7 +3,8 @@ import classes from "./PlayButton.module.css";
 import Button from "../../UI/Buttons/Buttons";
 
 const GameButtons = (props) => {
-  const addCountHandler = () => {
+  const addCountHandler = (e) => {
+    e.preventDefault();
     props.onScoreChangeHandler(props.count + 1);
   };
 

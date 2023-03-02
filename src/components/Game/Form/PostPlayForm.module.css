@@ -1,10 +1,17 @@
-.result {
+.resultBefore {
     margin: 2rem auto;
-    padding: 2rem;
-    max-width: 60vw;
-    max-height: 80vh;
     width: 40vw;
-    height: 50vh;
+    height: 100%;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: rgb(19, 97, 133);
+    border-radius: 16px;
+}
+
+.resultAfter {
+    margin: 2rem auto;
+    width: 40vw;
+    height: 95vh;
     font-size: 3rem;
     font-weight: bolder;
     color: rgb(19, 97, 133);
@@ -50,19 +57,23 @@
     margin: 1rem auto;
 }
 
-.submitBtn {
-    margin: 1rem auto;
-    padding: 0.5rem;
-    font-size: 1rem;
-    width: 50%;
-    color: rgb(255, 119, 65);
-    background-color: rgb(250, 225, 157);
-    border: none;
-    transition: transform .2s ease-out; 
+.show {
+    display:block;
 }
 
-.submitBtn:hover {
-    color: red;
-    background-color: yellow;
-    transform: scale(1.2)
+.hidden {
+    display: none;
+}
+
+.rankList {
+    padding: 0;
+    margin: 1rem auto;
+    color: white;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    list-style-type: none;
+}
+
+.rankItems {
+    border: solid 1px black;
 }

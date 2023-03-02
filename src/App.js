@@ -7,7 +7,7 @@ import Modal from "./components/UI/Modal/Modal";
 import classes from "./App.module.css";
 import PostPlayForm from "./components/Game/Form/PostPlayForm";
 
-const gameTime = 5; // 1 min
+const gameTime = 60; // 1 min
 const initGameScore = 0;
 
 function App() {
@@ -80,7 +80,7 @@ function App() {
 
   return (
     <React.Fragment>
-      <Modal />
+      {/* <Modal /> */}
       {/* add a form to send scores and name */}
       {!isEnd && gameContent}
       {isEnd && postPlayFormContent}
