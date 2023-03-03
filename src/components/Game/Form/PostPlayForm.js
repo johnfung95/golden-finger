@@ -5,7 +5,13 @@ import ResetButton from "../GameButtons/ResetButton";
 import SendResultButton from "../GameButtons/SendResultButton";
 import Ranking from "../Ranking/Ranking";
 
-const images = ["/img/click.jpg", "/img/click-fast.jpg"];
+const images = [
+  "/img/click.jpg",
+  "/img/click-fast.jpg",
+  "/img/hat.jpg",
+  "/img/stress-free.jpg",
+  "/img/stress-relief.jpg",
+];
 
 const PostPlayForm = (props) => {
   const [ranks, setRanks] = useState([]);
@@ -17,12 +23,14 @@ const PostPlayForm = (props) => {
       if (imgIndex === images.length - 1) {
         setImgIndex(0);
       } else {
-        setImgIndex((prevIndex) => prevIndex + 1);
+        setImgIndex((prevState) => prevState + 1);
       }
-    }, 2000);
+    }, 8000);
 
-    return clearInterval(intervalTimer);
-  });
+    return () => {
+      clearInterval(intervalTimer);
+    };
+  }, [imgIndex]);
 
   const getRankData = async () => {
     const res = await fetch(
@@ -74,13 +82,14 @@ const PostPlayForm = (props) => {
   return (
     <div className={isResultSent ? classes.resultAfter : classes.resultBefore}>
       <p>Your Score: {props.score}</p>
-      <div>
+      <div className={classes.fading}>
         <CrossfadeImage
           src={images[imgIndex]}
-          duration={2000}
+          duration={5000}
           timingFunction={"ease-out"}
         />
       </div>
+
       {isResultSent ? <Ranking ranks={ranks} /> : null}
       <form onSubmit={submitFormHandler} className={classes.form}>
         <label

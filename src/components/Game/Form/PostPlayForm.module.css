@@ -64,3 +64,9 @@
 .hidden {
     display: none;
 }
+
+.fading {
+    margin: 1rem auto;
+    width: 20rem;
+    height: 20rem;
+}
