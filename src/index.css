@@ -8,7 +8,6 @@
 html {
   background: linear-gradient(334deg, #f5fb09, #f9d12f, #f9932f, #f9662f, #f51b19);
   background-size: 400% 400%;
-
   -webkit-animation: bg-flow 5s ease infinite;
   -moz-animation: bg-flow 5s ease infinite;
   animation: bg-flow 5s ease infinite;
@@ -30,6 +29,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   min-width: 70%;
   width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }

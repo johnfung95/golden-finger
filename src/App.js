@@ -7,7 +7,7 @@ import Modal from "./components/UI/Modal/Modal";
 import classes from "./App.module.css";
 import PostPlayForm from "./components/Game/Form/PostPlayForm";
 
-const testing = true;
+const testing = false;
 let gameTime; // 60 = 1 min
 testing ? (gameTime = 5) : (gameTime = 60);
 const initGameScore = 0;

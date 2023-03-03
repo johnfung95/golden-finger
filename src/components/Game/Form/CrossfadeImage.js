@@ -70,7 +70,7 @@ export default class CrossfadeImage extends Component {
   }
 }
 
-const defaultStyle = { maxWidth: "100%", maxHeight: "100%" };
+const defaultStyle = { width: "100%", height: "100%", position: "relative" };
 
 CrossfadeImage.propTypes = {
   src: PropTypes.string.isRequired,
