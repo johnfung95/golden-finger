@@ -1,3 +1,10 @@
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   background: linear-gradient(334deg, #f5fb09, #f9d12f, #f9932f, #f9662f, #f51b19);
   background-size: 400% 400%;
@@ -5,22 +12,26 @@ html {
   -webkit-animation: bg-flow 5s ease infinite;
   -moz-animation: bg-flow 5s ease infinite;
   animation: bg-flow 5s ease infinite;
-  margin: auto;
+  margin: 0;
+  padding: 0;
   width: 100%;
   height: 100%;
-  display: inline-flex;
+  font-size: 0.6rem;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 body {
-  min-width: 70%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-width: 70%;
+  width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 code {
@@ -42,4 +53,11 @@ code {
   0%{background-position:0% 50%}
   50%{background-position:100% 50%}
   100%{background-position:0% 50%}
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 1rem;
+  }
+  
 }

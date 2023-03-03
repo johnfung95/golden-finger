@@ -20,7 +20,7 @@
     top:50%;
     transform:translate(-50%,-50%);
     width: 100%;
-    font-size: 3rem;
+    font-size: 1.5rem;
     font-weight: bolder;
     color: white;
     z-index: 30;
@@ -30,7 +30,7 @@
 
 .prePlayBtn {
     margin: 1rem auto;
-    font-size: 3rem;
+    font-size: 1.5rem;
     background-color: pink;
     border-radius: 16px;
     padding: 0.5rem 1rem;
@@ -76,6 +76,7 @@
 
 @media screen and (min-width: 768px) {
     .content {
+        font-size: 3rem;
         font-size: 3rem;
     }
 }

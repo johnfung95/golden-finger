@@ -1,21 +1,19 @@
 .resultBefore {
     margin: 2rem auto;
     width: 40vw;
-    height: 100%;
-    font-size: 3rem;
+    height: 100vh;
+    font-size: 2rem;
     font-weight: bolder;
     color: rgb(19, 97, 133);
-    border-radius: 16px;
 }
 
 .resultAfter {
     margin: 2rem auto;
     width: 40vw;
-    height: 95vh;
-    font-size: 3rem;
+    height: 100vh;
+    font-size: 2rem;
     font-weight: bolder;
     color: rgb(19, 97, 133);
-    border-radius: 16px;
 }
 
 .btnControl {
@@ -24,13 +22,12 @@
 
 }
 .formContainer {
-    margin: auto auto;
+    margin: auto;
     background-color: white;
     border-radius: 1rem;
     max-width: 60vw;
-    max-height: 80vh;
+    max-height: 100%;
     width: 40vw;
-    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,6 +50,7 @@
 }
 
 .input {
+    width: 100%;
     font-size: 1.5rem;
     margin: 1rem auto;
 }
@@ -66,7 +64,8 @@
 }
 
 .fading {
-    margin: 1rem auto;
-    width: 20rem;
-    height: 20rem;
+    width: 100%;
+    height: 15rem;
+    margin: auto;
+    padding: 0;
 }
