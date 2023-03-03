@@ -4,21 +4,16 @@ const Ranking = ({ ranks }) => {
   return (
     <ul className={classes.rankList}>
       <h1>Current Top 10 Scores:</h1>
-      {ranks.length > 0 ? (
-        ranks.map((rank) => {
-          return (
-            <li className={classes.rankItems} key={rank.key}>
-              <p>Name: {rank.name}</p>
-              <p>Score: {rank.score}</p>
-            </li>
-          );
-        })
-      ) : (
-        <p>
-          Lucky you, you will be the first person in the rank list. Put your
-          name there~
-        </p>
-      )}
+      {ranks.length > 0
+        ? ranks.map((rank) => {
+            return (
+              <li className={classes.rankItems} key={rank.key}>
+                <p>Name: {rank.name}</p>
+                <p>Score: {rank.score}</p>
+              </li>
+            );
+          })
+        : null}
     </ul>
   );
 };
